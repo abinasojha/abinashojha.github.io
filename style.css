@@ -1,7 +1,7 @@
 /* ===========================================================
    Abinash Ojha — Executive Portfolio
-   Design system: ink navy + brass accent, paper background.
-   Inspired by formal consulting/banking "tombstone" documents.
+   Design system: ink navy + brass accent on a bright white page,
+   set within a soft outer frame margin.
    =========================================================== */
 
 * {
@@ -13,14 +13,16 @@
 :root {
   --ink: #0B1C2C;
   --ink-soft: #16293D;
-  --paper: #FAF8F3;
-  --paper-deep: #F1ECE0;
-  --brass: #A6802E;
-  --brass-light: #C9A55C;
-  --slate: #5B6472;
-  --slate-soft: #8A93A1;
-  --hairline: #DCD3BC;
-  --hairline-dark: #2A3C52;
+  --paper: #FDFDFB;
+  --paper-deep: #F2F5F8;
+  --frame: #E6EAEF;
+  --brass: #AD8732;
+  --brass-light: #D1AE6B;
+  --slate: #54606D;
+  --slate-soft: #8B96A3;
+  --hairline: #E1E6EC;
+  --hairline-dark: #213347;
+  --gutter: clamp(18px, 4.5vw, 56px);
 }
 
 html {
@@ -29,7 +31,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--paper);
+  background: var(--frame);
   color: var(--ink);
   line-height: 1.6;
 }
@@ -44,6 +46,17 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+/* Page frame — gives the whole site a visible margin on both
+   sides and lets the bright paper surface read as a distinct
+   surface against the soft outer background. */
+.page {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  background: var(--paper);
+  box-shadow: 0 0 70px rgba(11, 28, 44, 0.05);
+}
+
 /* ===========================================================
    Navigation
    =========================================================== */
@@ -52,8 +65,8 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 8%;
-  background: rgba(250, 248, 243, 0.92);
+  padding: 18px 0;
+  background: rgba(253, 253, 251, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--hairline);
   position: sticky;
@@ -113,17 +126,16 @@ button:focus-visible {
 .hero {
   display: flex;
   justify-content: center;
-  padding: 60px 8%;
+  padding: 60px 0;
 }
 
 .hero-inner {
   width: 100%;
-  max-width: 1200px;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   gap: 60px;
   align-items: flex-start;
 }
@@ -205,12 +217,13 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Portrait — positioned to the left */
+/* Portrait — positioned to the right of the hero text */
 .portrait {
   width: 100%;
   max-width: 280px;
   padding: 6px;
   border: 1px solid var(--ink);
+  justify-self: end;
 }
 
 .portrait img {
@@ -229,7 +242,7 @@ button:focus-visible {
   justify-content: center;
   border-top: 1px solid var(--brass);
   border-bottom: 1px solid var(--brass);
-  padding: 36px 8%;
+  padding: 36px 0;
   background: var(--paper-deep);
 }
 
@@ -268,9 +281,7 @@ button:focus-visible {
    =========================================================== */
 
 section {
-  padding: 70px 8%;
-  max-width: 1300px;
-  margin: 0 auto;
+  padding: 70px 0;
 }
 
 section h2 {
@@ -453,7 +464,7 @@ section p {
 }
 
 .contact-card .label {
-  color: var(--brass);
+  color: var(--brass-light);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.72rem;
@@ -480,7 +491,7 @@ section p {
 
 footer {
   text-align: center;
-  padding: 50px 30px 40px;
+  padding: 50px 0 40px;
   background: var(--ink);
   color: var(--slate-soft);
 }
@@ -532,7 +543,7 @@ footer p {
 }
 
 /* ===========================================================
-   Responsive — Tablets (768px to 1024px)
+   Responsive — Tablets (up to 1024px)
    =========================================================== */
 
 @media (max-width: 1024px) {
@@ -546,14 +557,14 @@ footer p {
 }
 
 /* ===========================================================
-   Responsive — Medium Devices (769px to 768px)
+   Responsive — Medium devices (up to 768px)
    =========================================================== */
 
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     gap: 14px;
-    padding: 16px 6%;
+    padding: 16px 0;
   }
 
   .nav ul {
@@ -563,7 +574,7 @@ footer p {
   }
 
   .hero {
-    padding: 50px 6%;
+    padding: 50px 0;
   }
 
   .hero-content {
@@ -578,10 +589,11 @@ footer p {
   .portrait {
     max-width: 200px;
     margin: 0 auto;
+    justify-self: center;
   }
 
   .dashboard {
-    padding: 30px 6%;
+    padding: 30px 0;
   }
 
   .metric {
@@ -596,7 +608,7 @@ footer p {
   }
 
   section {
-    padding: 50px 6%;
+    padding: 50px 0;
   }
 
   .timeline-item {
@@ -622,12 +634,12 @@ footer p {
 }
 
 /* ===========================================================
-   Responsive — Small Devices (480px and below)
+   Responsive — Small devices (480px and below)
    =========================================================== */
 
 @media (max-width: 480px) {
   .nav {
-    padding: 14px 4%;
+    padding: 14px 0;
   }
 
   .nav a.brand {
@@ -643,7 +655,7 @@ footer p {
   }
 
   .hero {
-    padding: 40px 4%;
+    padding: 40px 0;
   }
 
   .hero h1 {
@@ -696,7 +708,7 @@ footer p {
   }
 
   section {
-    padding: 40px 4%;
+    padding: 40px 0;
   }
 
   section h2 {
@@ -775,7 +787,7 @@ footer p {
 }
 
 /* ===========================================================
-   Extra Small Devices (below 375px)
+   Extra small devices (below 375px)
    =========================================================== */
 
 @media (max-width: 374px) {
