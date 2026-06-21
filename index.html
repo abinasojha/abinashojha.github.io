@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abinash Ojha | Senior Technical Project/Program Manager</title>
-<meta name="description" content="Abinash Ojha — Senior Technical Project/Program Manager. 12+ years delivering enterprise-scale AI, Data and Cloud transformation programs across APAC, EMEA, and Americas.">
+<title>Abinash Ojha | Senior Technical Program Manager</title>
+<meta name="description" content="Abinash Ojha — Senior Technical Program Manager. 12+ years delivering enterprise-scale AI, Data and Cloud transformation programs across APAC, EMEA, and Americas.">
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,23 +17,44 @@
   <nav class="nav" aria-label="Main navigation">
     <div class="nav-brand">
       <span class="brand-name">Abinash Ojha</span>
-      <span class="brand-title">Sr. Technical Project/Program Manager</span>
+      <span class="brand-title">Sr. Technical Program Manager</span>
     </div>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="#about"      class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects"   class="nav-link">Programs</a></li>
+      <li><a href="#skills"     class="nav-link">Skills</a></li>
+      <li><a href="#contact"    class="nav-link">Contact</a></li>
+      <li><a href="Abinash_Ojha_Resume.pdf" class="nav-link nav-cta">Download CV</a></li>
+    </ul>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer (outside .nav so it can sit below it) -->
+  <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
     <ul>
       <li><a href="#about"      class="nav-link">About</a></li>
       <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#projects"   class="nav-link">Programs</a></li>
       <li><a href="#skills"     class="nav-link">Skills</a></li>
       <li><a href="#contact"    class="nav-link">Contact</a></li>
+      <li><a href="Abinash_Ojha_Resume.pdf" class="drawer-cta">Download CV ↓</a></li>
     </ul>
-    <a href="Abinash_Ojha_Resume.pdf" class="nav-link nav-cta">Download CV</a>
-  </nav>
+  </div>
 
   <!-- ─── Hero ────────────────────────────────────────────────── -->
   <header class="hero reveal" id="top" aria-label="Introduction">
 
     <div class="hero-left">
-      <p class="eyebrow">Senior Technical Project/Program Manager &amp; Transformation Lead</p>
+      <p class="eyebrow">Senior Technical Program Manager &amp; Transformation Lead</p>
 
       <h1>Delivering <em>Enterprise-Scale</em> AI, Data &amp; Cloud Programs That Move the Business</h1>
 
@@ -477,6 +498,41 @@
 /* ── Preferences ──────────────────────────────────────────────── */
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* ── Hamburger menu ───────────────────────────────────────────── */
+const hamburger = document.querySelector('.nav-hamburger');
+const drawer    = document.getElementById('nav-drawer');
+
+function closeDrawer() {
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  drawer.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = drawer.classList.contains('open');
+  if (isOpen) {
+    closeDrawer();
+  } else {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+});
+
+// Close drawer when any link inside it is tapped
+drawer.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeDrawer);
+});
+
+// Close on outside tap
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !drawer.contains(e.target)) {
+    closeDrawer();
+  }
+});
+
 /* ── Scroll-triggered reveal ──────────────────────────────────── */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -498,7 +554,6 @@ function animateCounter(el) {
   const tick = (now) => {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
-    // ease-out cubic
     const eased = 1 - Math.pow(1 - progress, 3);
     el.textContent = Math.round(eased * target);
     if (progress < 1) requestAnimationFrame(tick);
