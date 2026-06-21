@@ -123,21 +123,14 @@ button:focus-visible {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-}
-
-.hero-rule {
-  width: 60px;
-  height: 2px;
-  background: var(--brass);
-  margin-bottom: 28px;
 }
 
 .eyebrow {
@@ -171,7 +164,6 @@ button:focus-visible {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
 }
 
 .btn-primary,
@@ -213,14 +205,12 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Portrait — positioned to the right */
+/* Portrait — positioned to the left */
 .portrait {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   padding: 6px;
   border: 1px solid var(--ink);
-  justify-self: center;
-  align-self: center;
 }
 
 .portrait img {
@@ -551,7 +541,7 @@ footer p {
   }
 
   .portrait {
-    max-width: 250px;
+    max-width: 240px;
   }
 }
 
@@ -587,7 +577,7 @@ footer p {
 
   .portrait {
     max-width: 200px;
-    order: -1;
+    margin: 0 auto;
   }
 
   .dashboard {
@@ -666,11 +656,6 @@ footer p {
 
   .eyebrow {
     font-size: 0.7rem;
-  }
-
-  .hero-rule {
-    width: 40px;
-    margin-bottom: 20px;
   }
 
   .portrait {
