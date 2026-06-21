@@ -113,19 +113,31 @@ button:focus-visible {
 .hero {
   display: flex;
   justify-content: center;
-  padding: 90px 8% 70px;
+  padding: 60px 8%;
 }
 
 .hero-inner {
-  max-width: 700px;
-  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-rule {
   width: 60px;
   height: 2px;
   background: var(--brass);
-  margin: 0 auto 28px;
+  margin-bottom: 28px;
 }
 
 .eyebrow {
@@ -150,14 +162,13 @@ button:focus-visible {
 .hero-sub {
   font-size: 1.02rem;
   color: var(--slate);
-  max-width: 540px;
-  margin: 0 auto 36px;
+  line-height: 1.65;
+  margin-bottom: 36px;
   letter-spacing: 0.1px;
 }
 
 .hero-buttons {
   display: flex;
-  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 36px;
@@ -202,12 +213,14 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Optional portrait — see commented markup in index.html */
+/* Portrait — positioned to the right */
 .portrait {
-  width: 150px;
-  margin: 0 auto 32px;
+  width: 100%;
+  max-width: 300px;
   padding: 6px;
   border: 1px solid var(--ink);
+  justify-self: center;
+  align-self: center;
 }
 
 .portrait img {
@@ -529,7 +542,21 @@ footer p {
 }
 
 /* ===========================================================
-   Responsive
+   Responsive — Tablets (768px to 1024px)
+   =========================================================== */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 40px;
+  }
+
+  .portrait {
+    max-width: 250px;
+  }
+}
+
+/* ===========================================================
+   Responsive — Medium Devices (769px to 768px)
    =========================================================== */
 
 @media (max-width: 768px) {
@@ -546,11 +573,21 @@ footer p {
   }
 
   .hero {
-    padding: 70px 6% 50px;
+    padding: 50px 6%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .hero h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+  }
+
+  .portrait {
+    max-width: 200px;
+    order: -1;
   }
 
   .dashboard {
@@ -594,28 +631,195 @@ footer p {
   }
 }
 
+/* ===========================================================
+   Responsive — Small Devices (480px and below)
+   =========================================================== */
+
 @media (max-width: 480px) {
+  .nav {
+    padding: 14px 4%;
+  }
+
+  .nav a.brand {
+    font-size: 0.9rem;
+  }
+
+  .nav ul {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+  }
+
+  .hero {
+    padding: 40px 4%;
+  }
+
   .hero h1 {
     font-size: 1.45rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .hero-rule {
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+  .portrait {
+    max-width: 150px;
   }
 
   .metric {
     flex-basis: 100%;
     border-right: none;
+    border-top: 1px solid var(--hairline);
+    padding: 14px 10px 2px;
+  }
+
+  .metric:first-child {
+    border-top: none;
+  }
+
+  .metric h2 {
+    font-size: 2rem;
+  }
+
+  .metric span {
+    font-size: 0.65rem;
   }
 
   .hero-buttons {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
     text-align: center;
+    padding: 12px 20px;
+    font-size: 0.85rem;
   }
 
   section {
-    padding: 40px 6%;
+    padding: 40px 4%;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  section p {
+    font-size: 0.9rem;
+  }
+
+  .section-rule {
+    width: 40px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-item {
+    padding: 14px 12px;
+    margin-left: -12px;
+  }
+
+  .timeline-item::before {
+    left: -33px;
+  }
+
+  .timeline-year {
+    font-size: 0.85rem;
+  }
+
+  .timeline-item h3 {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card dt {
+    font-size: 0.65rem;
+  }
+
+  .project-card dd {
+    font-size: 0.85rem;
+  }
+
+  .contact-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .contact-card p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
+
+  .contact-card .label {
+    min-width: auto;
+  }
+
+  footer {
+    padding: 40px 20px 30px;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===========================================================
+   Extra Small Devices (below 375px)
+   =========================================================== */
+
+@media (max-width: 374px) {
+  .hero h1 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 11px 16px;
+    font-size: 0.8rem;
+  }
+
+  .portrait {
+    max-width: 130px;
+  }
+
+  .nav a.brand {
+    font-size: 0.85rem;
   }
 }
