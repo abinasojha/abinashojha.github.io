@@ -74,6 +74,13 @@ button:focus-visible {
   z-index: 100;
 }
 
+/* Desktop nav list */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
 .nav ul {
   display: flex;
   gap: 32px;
@@ -108,6 +115,7 @@ button:focus-visible {
   display: inline-block;
   border-bottom: none;
   padding-bottom: 0;
+  flex-shrink: 0;
 }
 
 .nav a.brand::after {
@@ -117,6 +125,46 @@ button:focus-visible {
   width: 100%;
   background: var(--brass);
   margin-top: 5px;
+}
+
+/* Hamburger button — hidden on desktop */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-hamburger:hover { background: var(--paper-deep); }
+
+.nav-hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger span:nth-child(2) { width: 70%; }
+
+/* Animate to × when open */
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Slide-down drawer — hidden until mobile breakpoint */
+.nav-drawer {
+  display: none;
 }
 
 /* ===========================================================
@@ -561,16 +609,79 @@ footer p {
    =========================================================== */
 
 @media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav links */
+  .nav-hamburger { display: flex; }
+  .nav-links     { display: none; }
+
+  /* Keep nav bar a single tight row */
   .nav {
-    flex-direction: column;
-    gap: 14px;
-    padding: 16px 0;
+    padding: 14px 0;
   }
 
-  .nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  /* Slide-down drawer */
+  .nav-drawer {
+    display: block;
+    position: fixed;
+    top: 57px; /* matches nav height at mobile */
+    left: 0;
+    right: 0;
+    background: rgba(253, 253, 251, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--brass);
+    z-index: 99;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+  }
+
+  .nav-drawer.open {
+    max-height: 380px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-drawer ul {
+    list-style: none;
+    padding: 10px 0 18px;
+  }
+
+  .nav-drawer ul li a {
+    display: block;
+    padding: 14px var(--gutter);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--slate);
+    border-left: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .nav-drawer ul li a:hover {
+    color: var(--ink);
+    border-color: var(--brass);
+    background: var(--paper-deep);
+  }
+
+  .nav-drawer .drawer-resume {
+    display: block;
+    margin: 6px var(--gutter) 0;
+    padding: 12px 20px;
+    background: var(--ink);
+    color: var(--paper) !important;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    border-left: none !important;
+  }
+
+  .nav-drawer .drawer-resume:hover {
+    background: var(--brass) !important;
+    color: var(--ink) !important;
   }
 
   .hero {
@@ -639,19 +750,7 @@ footer p {
 
 @media (max-width: 480px) {
   .nav {
-    padding: 14px 0;
-  }
-
-  .nav a.brand {
-    font-size: 0.9rem;
-  }
-
-  .nav ul {
-    gap: 12px;
-  }
-
-  .nav a {
-    font-size: 0.7rem;
+    padding: 12px 0;
   }
 
   .hero {
@@ -814,9 +913,5 @@ footer p {
 
   .portrait {
     max-width: 130px;
-  }
-
-  .nav a.brand {
-    font-size: 0.85rem;
   }
 }
