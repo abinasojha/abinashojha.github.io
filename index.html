@@ -3,157 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abinash Ojha | Senior Technical Program Manager</title>
+<title>Abinash Ojha | Executive Portfolio</title>
+<link rel="stylesheet" href="executive_style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0b1020;color:#e5e7eb;line-height:1.6}
-nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:rgba(11,16,32,.9);backdrop-filter:blur(12px);z-index:100}
-nav ul{display:flex;gap:24px;list-style:none}
-nav a{text-decoration:none;color:#fff}
-.logo{font-weight:800;font-size:1.3rem}
-
-.hero{padding:110px 8%;text-align:center;background:linear-gradient(135deg,#081126,#1e3a8a)}
-.hero h1{font-size:4rem}
-.hero h2{margin-top:15px;font-size:2rem}
-.hero h3{margin:20px auto;max-width:900px;color:#cbd5e1}
-.hero p{margin-top:20px;font-size:1.2rem}
-.buttons{margin-top:30px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
-.btn{padding:14px 24px;border-radius:12px;text-decoration:none;font-weight:600}
-.primary{background:#fff;color:#111827}
-.secondary{border:1px solid #fff;color:#fff}
-
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:40px 8%}
-.stat,.card,.glass,.timeline-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);border-radius:20px}
-.stat{text-align:center;padding:25px}
-.stat h3{font-size:2rem}
-
-section{padding:70px 8%}
-section h2{margin-bottom:25px;font-size:2rem}
-
-.glass{padding:25px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{padding:25px}
-
-.timeline{display:grid;gap:15px}
-.timeline-item{padding:20px}
-
-.tech-stack{display:flex;flex-wrap:wrap;gap:12px}
-.badge{padding:10px 16px;background:#1e293b;border-radius:999px}
-
-footer{text-align:center;padding:30px;border-top:1px solid rgba(255,255,255,.1)}
-
-a{color:#93c5fd}
-
-@media(max-width:768px){
-.hero h1{font-size:2.5rem}
-.hero h2{font-size:1.4rem}
-.stats{grid-template-columns:repeat(2,1fr)}
-nav{flex-direction:column;gap:15px}
-nav ul{flex-wrap:wrap;justify-content:center}
-}
-</style>
 </head>
 <body>
 
-<nav>
-<div class="logo">Abinash Ojha</div>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#portfolio">Projects</a></li>
-<li><a href="#insights">Insights</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<nav class="nav">
+  <div class="brand">Abinash Ojha</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<section class="hero">
-<h1>Abinash Ojha</h1>
-<h2>Senior Technical Project / Program Manager</h2>
-<h3>Driving Enterprise Transformation Through AI, Data, Cloud & Program Leadership</h3>
-<p>AI | Data Platforms | Cloud Transformation | Enterprise Delivery | Application Development</p>
+<header class="hero">
+  <div class="hero-left reveal">
+    <span class="tag">Senior Technical Project / Program Manager</span>
+    <h1>Driving Enterprise Transformation Through AI, Data & Cloud Leadership</h1>
+    <p>12+ years delivering enterprise-scale programs across AI, Data Platforms, Cloud Modernization and Digital Transformation.</p>
 
-<div class="buttons">
-<a href="Abinash_Ojha_Resume.pdf" class="btn primary">Download Resume</a>
-<a href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/" target="_blank" class="btn secondary">LinkedIn</a>
-</div>
+    <div class="hero-buttons">
+      <a href="Abinash_Ojha_Resume.pdf" class="btn-primary">Download Resume</a>
+      <a href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/" target="_blank" class="btn-secondary">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="hero-right reveal">
+    <div class="photo-card">
+      <div class="photo-placeholder">YOUR PHOTO</div>
+    </div>
+  </div>
+</header>
+
+<section class="dashboard">
+  <div class="metric">
+    <h2 class="counter" data-target="12">0</h2><span>+ Years Experience</span>
+  </div>
+  <div class="metric">
+    <h2 class="counter" data-target="20">0</h2><span>+ Programs Delivered</span>
+  </div>
+  <div class="metric">
+    <h2 class="counter" data-target="5">0</h2><span>Enterprise Domains</span>
+  </div>
+  <div class="metric">
+    <h2>Global</h2><span>Cross Functional Teams</span>
+  </div>
 </section>
 
-<div class="stats">
-<div class="stat"><h3>12+</h3><p>Years Experience</p></div>
-<div class="stat"><h3>20+</h3><p>Programs Delivered</p></div>
-<div class="stat"><h3>Global</h3><p>Cross Functional Teams</p></div>
-<div class="stat"><h3>AI</h3><p>Data & Cloud Transformation</p></div>
-</div>
-
-<section id="about">
+<section id="about" class="reveal">
 <h2>About Me</h2>
-<div class="glass">
-<p>Experienced Technical Program Manager with 12+ years of experience delivering enterprise-scale programs across AI, Data Platforms, Cloud Transformation, Enterprise Applications, and Digital Modernization initiatives.</p>
-<br>
-<p>I specialize in bridging business strategy and technology execution through strong program governance, stakeholder management, delivery leadership, risk management, and cross-functional collaboration.</p>
-<br>
-<p>My focus areas include AI adoption, cloud modernization, enterprise data platforms, application development, and large-scale transformation programs that deliver measurable business outcomes.</p>
-</div>
+<p>Experienced Technical Program Manager with expertise in AI, Data Engineering, Cloud Transformation, Enterprise Applications and Large-Scale Delivery. Passionate about aligning business strategy with technology execution.</p>
 </section>
 
-<section id="experience">
+<section id="experience" class="reveal">
 <h2>Professional Journey</h2>
 <div class="timeline">
-<div class="timeline-item"><h3>Senior Technical Program Manager</h3><p>2024 – Present</p></div>
-<div class="timeline-item"><h3>Technical Program Manager</h3><p>2021 – 2024</p></div>
-<div class="timeline-item"><h3>Project Manager</h3><p>2018 – 2021</p></div>
-<div class="timeline-item"><h3>Technology Consultant</h3><p>2013 – 2018</p></div>
+<div class="timeline-item"><h3>Senior Technical Program Manager</h3><p>2024 - Present</p></div>
+<div class="timeline-item"><h3>Technical Program Manager</h3><p>2021 - 2024</p></div>
+<div class="timeline-item"><h3>Project Manager</h3><p>2018 - 2021</p></div>
+<div class="timeline-item"><h3>Technology Consultant</h3><p>2013 - 2018</p></div>
 </div>
 </section>
 
-<section id="portfolio">
+<section id="projects" class="reveal">
 <h2>Featured Transformation Programs</h2>
-<div class="cards">
-<div class="card"><h3>Enterprise Data Lake Modernization</h3><p>Cloud-native data platform architecture for analytics and reporting.</p></div>
-<div class="card"><h3>Customer 360 Platform</h3><p>Unified customer data ecosystem and business insights.</p></div>
-<div class="card"><h3>Enterprise AI Adoption Framework</h3><p>Governance, risk controls and GenAI adoption strategy.</p></div>
-<div class="card"><h3>Cloud Migration Governance Model</h3><p>Transformation roadmap, execution framework and reporting.</p></div>
+<div class="project-grid">
+<div class="project-card">
+<h3>Enterprise Data Lake Modernization</h3>
+<p><b>Challenge:</b> Fragmented enterprise data.</p>
+<p><b>Solution:</b> Cloud-native lake architecture.</p>
+<p><b>Outcome:</b> Faster analytics readiness.</p>
+</div>
+
+<div class="project-card">
+<h3>Customer 360 Platform</h3>
+<p><b>Challenge:</b> Disconnected customer systems.</p>
+<p><b>Solution:</b> Unified data platform.</p>
+<p><b>Outcome:</b> Better customer insights.</p>
+</div>
+
+<div class="project-card">
+<h3>Enterprise AI Adoption</h3>
+<p><b>Challenge:</b> Governance and adoption.</p>
+<p><b>Solution:</b> AI operating framework.</p>
+<p><b>Outcome:</b> Scalable AI enablement.</p>
+</div>
 </div>
 </section>
 
-<section id="insights">
-<h2>Thought Leadership & Insights</h2>
-<div class="cards">
-<div class="card">AI for Technical Program Managers</div>
-<div class="card">Data Lake vs Data Warehouse</div>
-<div class="card">Program Governance Frameworks</div>
-</div>
-</section>
-
-<section>
-<h2>Technology Stack</h2>
-<div class="tech-stack">
-<span class="badge">AWS</span>
-<span class="badge">Azure</span>
-<span class="badge">Snowflake</span>
-<span class="badge">Databricks</span>
-<span class="badge">Power BI</span>
-<span class="badge">Kafka</span>
-<span class="badge">Airflow</span>
-<span class="badge">Python</span>
-<span class="badge">SQL</span>
-<span class="badge">OpenAI</span>
-</div>
-</section>
-
-<section id="contact">
+<section id="contact" class="reveal">
 <h2>Let's Connect</h2>
-<div class="glass">
-<p><strong>Email:</strong> <a href="mailto:abioojha@gmail.com">abioojha@gmail.com</a></p>
-<p><strong>Phone:</strong> +91 9019039029</p>
-<p><strong>LinkedIn:</strong> <a target="_blank" href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/">linkedin.com/in/abinash-ojha-45ba2b116</a></p>
+<div class="contact-card">
+<p>Email: abioojha@gmail.com</p>
+<p>Phone: +91 9019039029</p>
+<p>LinkedIn: linkedin.com/in/abinash-ojha-45ba2b116</p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Abinash Ojha | Senior Technical Project / Program Manager</p>
+© 2026 Abinash Ojha | Executive Portfolio
 </footer>
+
+<script>
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+const target=+counter.dataset.target;
+let count=0;
+const update=()=>{
+count+=Math.ceil(target/40);
+if(count<target){counter.innerText=count;requestAnimationFrame(update);}
+else{counter.innerText=target;}
+};
+update();
+});
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');}
+});
+});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
