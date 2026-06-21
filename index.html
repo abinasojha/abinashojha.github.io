@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abinash Ojha | Executive Portfolio</title>
-<meta name="description" content="Abinash Ojha — Senior Technical Program Manager with 12+ years delivering enterprise-scale AI, Data and Cloud transformation programs.">
+<title>Abinash Ojha | Senior Technical Program Manager</title>
+<meta name="description" content="Abinash Ojha — Senior Technical Program Manager. 12+ years delivering enterprise-scale AI, Data and Cloud transformation programs across APAC, EMEA, and Americas.">
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="page">
 
-  <nav class="nav">
-    <a href="#top" class="brand">Abinash Ojha</a>
+  <!-- ─── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-brand">
+      <span class="brand-name">Abinash Ojha</span>
+      <span class="brand-title">Sr. Technical Program Manager</span>
+    </div>
 
     <!-- Desktop links -->
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about"      class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects"   class="nav-link">Programs</a></li>
+      <li><a href="#skills"     class="nav-link">Skills</a></li>
+      <li><a href="#contact"    class="nav-link">Contact</a></li>
+      <li><a href="Abinash_Ojha_Resume.pdf" class="nav-link nav-cta">Download CV</a></li>
     </ul>
 
-    <!-- Hamburger button (mobile only) -->
+    <!-- Hamburger (mobile only) -->
     <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span>
       <span></span>
@@ -32,169 +38,465 @@
     </button>
   </nav>
 
-  <!-- Mobile slide-down drawer — sits outside nav, hidden by default -->
+  <!-- Mobile drawer (outside .nav so it can sit below it) -->
   <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
-    <nav class="drawer-nav">
-      <a href="#about"      class="drawer-link">About</a>
-      <a href="#experience" class="drawer-link">Experience</a>
-      <a href="#projects"   class="drawer-link">Projects</a>
-      <a href="#contact"    class="drawer-link">Contact</a>
-      <a href="Abinash_Ojha_Resume.pdf" class="drawer-link drawer-resume">Download Résumé</a>
-    </nav>
+    <ul>
+      <li><a href="#about"      class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects"   class="nav-link">Programs</a></li>
+      <li><a href="#skills"     class="nav-link">Skills</a></li>
+      <li><a href="#contact"    class="nav-link">Contact</a></li>
+      <li><a href="Abinash_Ojha_Resume.pdf" class="drawer-cta">Download CV ↓</a></li>
+    </ul>
   </div>
 
-  <header class="hero" id="top">
-    <div class="hero-inner reveal">
+  <!-- ─── Hero ────────────────────────────────────────────────── -->
+  <header class="hero reveal" id="top" aria-label="Introduction">
 
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="eyebrow">Senior Technical Project / Program Manager</p>
-          <h1>Driving Enterprise Transformation Through AI, Data &amp; Cloud Leadership</h1>
-          <p class="hero-sub">12+ years delivering enterprise-scale programs across AI, Data Platforms, Cloud Modernization and Digital Transformation.</p>
+    <div class="hero-left">
+      <p class="eyebrow">Senior Technical Program Manager &amp; Transformation Lead</p>
 
-          <div class="hero-buttons">
-            <a href="Abinash_Ojha_Resume.pdf" class="btn-primary">Download Résumé</a>
-            <a href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/" target="_blank" rel="noopener" class="btn-secondary">View LinkedIn Profile</a>
-          </div>
-        </div>
+      <h1>Delivering <em>Enterprise-Scale</em> AI, Data &amp; Cloud Programs That Move the Business</h1>
 
-        <div class="portrait">
-          <img src="abinash_image_portfolio.png" alt="Abinash Ojha">
-        </div>
+      <p class="hero-sub">
+        12+ years building and running complex transformation programs across AI/ML platforms, data modernization, cloud migrations, and enterprise application rollouts — from ideation to measurable business outcomes.
+      </p>
+
+      <p class="hero-mandate">
+        ✦ Trusted to lead $50M+ programs across APAC, EMEA &amp; Americas, coordinating 100+ engineers, architects, and business stakeholders in highly regulated environments.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="Abinash_Ojha_Resume.pdf" class="btn-primary">Download Résumé</a>
+        <a href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/" target="_blank" rel="noopener" class="btn-secondary">LinkedIn Profile ↗</a>
       </div>
-
     </div>
+
+    <div class="hero-right">
+      <div class="portrait-frame">
+        <img src="abinash_image_portfolio.png"
+             alt="Abinash Ojha — Senior Technical Program Manager"
+             width="320"
+             height="400">
+      </div>
+      <div class="portrait-tag">
+        <span class="dot"></span>
+        Open to Senior TPM &amp; Director Roles
+      </div>
+    </div>
+
   </header>
 
-  <section class="dashboard reveal" aria-label="Career highlights">
-    <div class="metric">
-      <h2 class="counter" data-target="12">0</h2><span>+ Years Experience</span>
+  <!-- ─── Achievement Banner ──────────────────────────────────── -->
+  <div class="achievement-banner reveal" aria-label="Career highlights">
+    <p class="section-label">Career Impact at a Glance</p>
+    <div class="achievement-grid">
+
+      <div class="achievement-item">
+        <div class="ach-number">
+          <span class="counter" data-target="12">0</span><span class="suffix">+</span>
+        </div>
+        <div class="ach-label">Years of Enterprise Delivery</div>
+        <div class="ach-detail">AI · Data · Cloud · ERP</div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="ach-number">
+          $<span class="counter" data-target="50">0</span><span class="suffix">M+</span>
+        </div>
+        <div class="ach-label">Programs Under Management</div>
+        <div class="ach-detail">Budget ownership, risk &amp; governance</div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="ach-number">
+          <span class="counter" data-target="20">0</span><span class="suffix">+</span>
+        </div>
+        <div class="ach-label">Programs Delivered</div>
+        <div class="ach-detail">On-time, on-scope, on-budget</div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="ach-number">
+          <span class="counter" data-target="3">0</span>
+        </div>
+        <div class="ach-label">Global Regions</div>
+        <div class="ach-detail">APAC · EMEA · Americas</div>
+      </div>
+
     </div>
-    <div class="metric">
-      <h2 class="counter" data-target="20">0</h2><span>+ Programs Delivered</span>
+  </div>
+
+  <!-- ─── KPI Strip ────────────────────────────────────────────── -->
+  <div class="kpi-strip reveal" aria-label="Key performance indicators">
+    <div class="kpi-grid">
+
+      <div class="kpi-item">
+        <span class="kpi-icon">🤖</span>
+        <div class="kpi-number"><span class="counter" data-target="5">0</span><span class="kpi-suffix">+</span></div>
+        <span class="kpi-label">AI &amp; ML Programs<br>Deployed</span>
+      </div>
+
+      <div class="kpi-item">
+        <span class="kpi-icon">☁️</span>
+        <div class="kpi-number"><span class="counter" data-target="8">0</span><span class="kpi-suffix">+</span></div>
+        <span class="kpi-label">Cloud Migration<br>Programs</span>
+      </div>
+
+      <div class="kpi-item">
+        <span class="kpi-icon">🏢</span>
+        <div class="kpi-number"><span class="counter" data-target="5">0</span></div>
+        <span class="kpi-label">Enterprise Domains<br>Mastered</span>
+      </div>
+
+      <div class="kpi-item">
+        <span class="kpi-icon">👥</span>
+        <div class="kpi-number"><span class="counter" data-target="100">0</span><span class="kpi-suffix">+</span></div>
+        <span class="kpi-label">Cross-Functional<br>Stakeholders Led</span>
+      </div>
+
+      <div class="kpi-item">
+        <span class="kpi-icon">🌐</span>
+        <div class="kpi-number"><span class="counter" data-target="10">0</span><span class="kpi-suffix">+</span></div>
+        <span class="kpi-label">Countries &amp;<br>Timezones</span>
+      </div>
+
     </div>
-    <div class="metric">
-      <h2 class="counter" data-target="5">0</h2><span>Enterprise Domains</span>
+  </div>
+
+  <!-- ─── About ───────────────────────────────────────────────── -->
+  <section id="about" class="section-wrap reveal">
+    <div class="section-header">
+      <p class="section-eyebrow">Executive Summary</p>
+      <h2>Transforming Strategy into Scalable Delivery</h2>
+      <div class="section-rule"></div>
     </div>
-    <div class="metric">
-      <h2>Global</h2><span>Cross-Functional Teams</span>
+
+    <div class="about-grid">
+      <div class="about-primary">
+        <p>I partner with C-suite sponsors and technology leaders to turn ambitious transformation mandates into disciplined, measurable delivery programs. My work sits at the intersection of business strategy, enterprise architecture, and large-scale program governance — where translating a board-level vision into an executable roadmap requires equal parts technical depth and executive communication.</p>
+        <p>Across AI/ML enablement, cloud modernisation, data platform builds, and enterprise application rollouts, I bring rigour to ambiguity: standing up delivery frameworks, orchestrating global teams across time zones, managing risk before it becomes crisis, and keeping programs financially on-track even when scope evolves.</p>
+        <p>My background spanning multiple industries — financial services, retail, healthcare, and technology — means I adapt delivery models to regulated, complex environments without losing velocity.</p>
+      </div>
+
+      <div class="about-sidebar">
+        <div class="credential-item reveal reveal-delay-1">
+          <div class="cred-label">Domain Expertise</div>
+          <div class="cred-value">AI/ML Enablement · Data Platform Modernisation · Cloud Migration · ERP &amp; CRM Transformation</div>
+        </div>
+        <div class="credential-item reveal reveal-delay-2">
+          <div class="cred-label">Leadership Style</div>
+          <div class="cred-value">Outcome-driven · Servant leadership · Structured escalation · Transparent stakeholder communication</div>
+        </div>
+        <div class="credential-item reveal reveal-delay-3">
+          <div class="cred-label">Methodology</div>
+          <div class="cred-value">SAFe Agile · PMP Framework · Waterfall hybrid · OKR alignment · RACI governance</div>
+        </div>
+        <div class="credential-item reveal">
+          <div class="cred-label">Delivery Environments</div>
+          <div class="cred-value">BFSI · Retail · Healthcare · SaaS · Highly regulated multi-market orgs</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="about" class="reveal">
-    <h2>About</h2>
-    <div class="section-rule"></div>
-    <p>Experienced Technical Program Manager with expertise in AI, Data Engineering, Cloud Transformation, Enterprise Applications and Large-Scale Delivery. Passionate about aligning business strategy with technology innovation, I drive cross-functional collaboration to deliver measurable outcomes. Proven track record of leading complex transformations in highly regulated environments, managing budgets exceeding $50M and coordinating global teams across APAC, EMEA, and Americas regions.</p>
-  </section>
+  <!-- ─── Experience ──────────────────────────────────────────── -->
+  <section id="experience" class="section-wrap reveal">
+    <div class="section-header">
+      <p class="section-eyebrow">Professional Journey</p>
+      <h2>12 Years of Progressive Leadership</h2>
+      <div class="section-rule"></div>
+    </div>
 
-  <section id="experience" class="reveal">
-    <h2>Professional Journey</h2>
-    <div class="section-rule"></div>
     <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-year">2024 — Present</span>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-meta">
+          <span class="timeline-year">2024 — Present</span>
+          <span class="timeline-company">Transformation Consulting</span>
+        </div>
         <h3>Senior Technical Program Manager</h3>
+        <p>Leading enterprise AI adoption programs and multi-cloud modernisation portfolios. Accountable for end-to-end delivery governance, executive steering committees, and cross-functional alignment across engineering, product, legal, and business operations.</p>
+        <div class="timeline-tags">
+          <span class="tag">AI Program Governance</span>
+          <span class="tag">Multi-Cloud</span>
+          <span class="tag">Portfolio Management</span>
+          <span class="tag">Exec Reporting</span>
+        </div>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2021 — 2024</span>
+
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-meta">
+          <span class="timeline-year">2021 — 2024</span>
+          <span class="timeline-company">Enterprise Technology</span>
+        </div>
         <h3>Technical Program Manager</h3>
+        <p>Owned delivery of data lake modernisation, Customer 360, and real-time analytics programs. Managed $30M+ in program budgets, led 60+ engineers across three time zones, and introduced SAFe Agile practices that reduced release cycle time by 35%.</p>
+        <div class="timeline-tags">
+          <span class="tag">Data Engineering</span>
+          <span class="tag">SAFe Agile</span>
+          <span class="tag">AWS / Azure</span>
+          <span class="tag">Stakeholder Management</span>
+        </div>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2018 — 2021</span>
+
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-meta">
+          <span class="timeline-year">2018 — 2021</span>
+          <span class="timeline-company">Financial Services</span>
+        </div>
         <h3>Project Manager</h3>
+        <p>Delivered CRM migrations, digital banking feature rollouts, and regulatory compliance programs in a highly governed BFSI environment. Built robust risk and change management frameworks adopted across the wider programme.</p>
+        <div class="timeline-tags">
+          <span class="tag">BFSI</span>
+          <span class="tag">CRM Migration</span>
+          <span class="tag">Regulatory Compliance</span>
+          <span class="tag">Risk Management</span>
+        </div>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2013 — 2018</span>
+
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-meta">
+          <span class="timeline-year">2013 — 2018</span>
+          <span class="timeline-company">Technology Consulting</span>
+        </div>
         <h3>Technology Consultant</h3>
+        <p>Advised enterprise clients on digital transformation roadmaps, ERP implementations, and process redesign initiatives. Developed a foundation in business analysis, solution architecture, and executive stakeholder engagement across APAC.</p>
+        <div class="timeline-tags">
+          <span class="tag">ERP Implementation</span>
+          <span class="tag">Business Analysis</span>
+          <span class="tag">Digital Strategy</span>
+          <span class="tag">APAC Markets</span>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <section id="projects" class="reveal">
-    <h2>Featured Transformation Programs</h2>
-    <div class="section-rule"></div>
+  <!-- ─── Featured Programs ───────────────────────────────────── -->
+  <section id="projects" class="section-wrap reveal">
+    <div class="section-header">
+      <p class="section-eyebrow">Featured Transformation Programs</p>
+      <h2>Delivering Outcomes, Not Just Outputs</h2>
+      <div class="section-rule"></div>
+    </div>
+
     <div class="project-grid">
 
-      <article class="project-card">
-        <h3>Enterprise Data Lake Modernization</h3>
-        <dl>
-          <dt>Challenge</dt>
-          <dd>Fragmented enterprise data.</dd>
-          <dt>Solution</dt>
-          <dd>Cloud-native lake architecture.</dd>
-          <dt>Outcome</dt>
-          <dd>Faster analytics readiness.</dd>
-        </dl>
+      <article class="project-card reveal">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-domain">Data &amp; Analytics</div>
+          <h3>Enterprise Data Lake Modernisation</h3>
+          <p class="card-desc">Fragmented data silos across 12 business units were blocking analytics and AI initiatives. Led architecture-to-deployment of a cloud-native lakehouse on AWS, governing 40+ engineers and 6 vendor teams across APAC and EMEA.</p>
+          <div class="outcome-row">
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Reduced time-to-insight from 14 days to under 4 hours
+            </div>
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Unified 3 legacy data warehouses into a single governed platform
+            </div>
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Enabled 8 downstream AI/ML workloads within 6 months of go-live
+            </div>
+          </div>
+        </div>
+        <div class="card-metric">
+          <span class="metric-num">98%</span>
+          <span class="metric-desc">SLA Compliance<br>Post-Launch</span>
+        </div>
       </article>
 
-      <article class="project-card">
-        <h3>Customer 360 Platform</h3>
-        <dl>
-          <dt>Challenge</dt>
-          <dd>Disconnected customer systems.</dd>
-          <dt>Solution</dt>
-          <dd>Unified data platform.</dd>
-          <dt>Outcome</dt>
-          <dd>Better customer insights.</dd>
-        </dl>
+      <article class="project-card reveal reveal-delay-1">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-domain">Customer Intelligence</div>
+          <h3>Customer 360 Unified Platform</h3>
+          <p class="card-desc">Disconnected CRM, transaction, and behavioural systems were preventing personalisation at scale. Orchestrated a $22M programme to build a real-time Customer 360 platform integrating 9 source systems into a single customer record.</p>
+          <div class="outcome-row">
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Delivered full customer profile unification across 4M+ records
+            </div>
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Increased cross-sell conversion by 18% in first quarter post-launch
+            </div>
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Programme closed on-time and 6% under budget
+            </div>
+          </div>
+        </div>
+        <div class="card-metric">
+          <span class="metric-num">$22M</span>
+          <span class="metric-desc">Programme Value<br>Delivered</span>
+        </div>
       </article>
 
-      <article class="project-card">
-        <h3>Enterprise AI Adoption</h3>
-        <dl>
-          <dt>Challenge</dt>
-          <dd>Governance and adoption.</dd>
-          <dt>Solution</dt>
-          <dd>AI operating framework.</dd>
-          <dt>Outcome</dt>
-          <dd>Scalable AI enablement.</dd>
-        </dl>
+      <article class="project-card reveal reveal-delay-2">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-domain">AI &amp; Automation</div>
+          <h3>Enterprise AI Adoption &amp; Governance</h3>
+          <p class="card-desc">Lack of an AI operating model was creating governance gaps and adoption friction across business units. Designed and rolled out an enterprise AI framework — covering model lifecycle, risk controls, and centre-of-excellence enablement.</p>
+          <div class="outcome-row">
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Launched AI CoE adopted by 6 business units in 90 days
+            </div>
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              12 production ML models governed under unified risk framework
+            </div>
+            <div class="outcome-item">
+              <span class="outcome-check">✓</span>
+              Reduced model deployment cycle from 3 months to 3 weeks
+            </div>
+          </div>
+        </div>
+        <div class="card-metric">
+          <span class="metric-num">4×</span>
+          <span class="metric-desc">Faster Model<br>Deployment</span>
+        </div>
       </article>
 
     </div>
   </section>
 
-  <section id="contact" class="reveal">
-    <h2>Let's Connect</h2>
-    <div class="section-rule"></div>
-    <div class="contact-card">
-      <p><span class="label">Email</span> <a href="mailto:abioojha@gmail.com">abioojha@gmail.com</a></p>
-      <p><span class="label">Phone</span> <a href="tel:+919019039029">+91 90190 39029</a></p>
-      <p><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/" target="_blank" rel="noopener">linkedin.com/in/abinash-ojha-45ba2b116</a></p>
+  <!-- ─── Technology Landscape ────────────────────────────────── -->
+  <section id="skills" class="section-wrap reveal">
+    <div class="section-header">
+      <p class="section-eyebrow">Technology Landscape</p>
+      <h2>Platforms, Tools &amp; Methodologies</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="tech-landscape">
+
+      <div class="tech-domain">
+        <div class="tech-domain-label">Cloud Platforms</div>
+        <div class="tech-badges">
+          <span class="badge badge-core">AWS</span>
+          <span class="badge badge-core">Microsoft Azure</span>
+          <span class="badge badge-core">Google Cloud</span>
+          <span class="badge badge-strong">Snowflake</span>
+          <span class="badge badge-strong">Databricks</span>
+        </div>
+      </div>
+
+      <div class="tech-domain">
+        <div class="tech-domain-label">AI / ML &amp; Data</div>
+        <div class="tech-badges">
+          <span class="badge badge-core">Azure ML / OpenAI</span>
+          <span class="badge badge-core">SageMaker</span>
+          <span class="badge badge-strong">Apache Spark</span>
+          <span class="badge badge-strong">dbt</span>
+          <span class="badge badge-strong">Kafka</span>
+          <span class="badge badge-light">Power BI</span>
+          <span class="badge badge-light">Tableau</span>
+        </div>
+      </div>
+
+      <div class="tech-domain">
+        <div class="tech-domain-label">Program Delivery</div>
+        <div class="tech-badges">
+          <span class="badge badge-core">Jira / Confluence</span>
+          <span class="badge badge-core">MS Project</span>
+          <span class="badge badge-strong">SAFe Agile</span>
+          <span class="badge badge-strong">PMP Framework</span>
+          <span class="badge badge-strong">OKR Alignment</span>
+          <span class="badge badge-light">Smartsheet</span>
+        </div>
+      </div>
+
+      <div class="tech-domain">
+        <div class="tech-domain-label">Enterprise Apps</div>
+        <div class="tech-badges">
+          <span class="badge badge-core">Salesforce CRM</span>
+          <span class="badge badge-strong">SAP S/4HANA</span>
+          <span class="badge badge-strong">ServiceNow</span>
+          <span class="badge badge-light">Workday</span>
+          <span class="badge badge-light">Oracle Cloud</span>
+        </div>
+      </div>
+
+      <div class="tech-domain">
+        <div class="tech-domain-label">Governance &amp; Risk</div>
+        <div class="tech-badges">
+          <span class="badge badge-core">RACI / DACI</span>
+          <span class="badge badge-strong">Change Management</span>
+          <span class="badge badge-strong">Risk Registers</span>
+          <span class="badge badge-strong">Steering Committees</span>
+          <span class="badge badge-light">ITIL Foundations</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- ─── Contact ─────────────────────────────────────────────── -->
+  <section id="contact" class="section-wrap reveal">
+    <div class="section-header">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2>Let's Build Something Significant</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="contact-layout">
+
+      <div class="contact-pitch">
+        <h3>Open to Senior TPM, Director of Programs, and VP Delivery roles.</h3>
+        <p>If you're looking for an executive-level program leader to drive a critical transformation — AI platform build, cloud modernisation, data strategy, or enterprise application rollout — I'd be glad to connect.</p>
+        <p>I work best with organisations that are serious about outcomes, not just activity, and need a partner who can operate credibly at both the board level and in the engineering room.</p>
+        <div class="availability-badge">
+          <span class="avail-dot"></span>
+          Available for new engagements — 2026
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-row">
+          <span class="clabel">Email</span>
+          <a href="mailto:abioojha@gmail.com">abioojha@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="clabel">Phone</span>
+          <a href="tel:+919019039029">+91 90190 39029</a>
+        </div>
+        <div class="contact-row">
+          <span class="clabel">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/abinash-ojha-45ba2b116/" target="_blank" rel="noopener">
+            linkedin.com/in/abinash-ojha
+          </a>
+        </div>
+        <div class="contact-row">
+          <span class="clabel">Location</span>
+          <span>Bengaluru, India · Open to relocation &amp; remote</span>
+        </div>
+        <div class="contact-row">
+          <span class="clabel">Résumé</span>
+          <a href="Abinash_Ojha_Resume.pdf">Download PDF ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
   <footer>
     <div class="footer-rule"></div>
-    <p>© 2026 Abinash Ojha — Executive Portfolio</p>
+    <p>© 2026 Abinash Ojha · Senior Technical Program Manager · Bengaluru, India</p>
   </footer>
 
-</div>
+</div><!-- /.page -->
 
 <script>
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* ── Counters ─────────────────────────────────────────────────── */
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-  const target = +counter.dataset.target;
-  if (prefersReducedMotion) { counter.innerText = target; return; }
-  let count = 0;
-  const update = () => {
-    count += Math.ceil(target / 40);
-    if (count < target) { counter.innerText = count; requestAnimationFrame(update); }
-    else { counter.innerText = target; }
-  };
-  update();
-});
-
-/* ── Scroll reveal ────────────────────────────────────────────── */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('show'); observer.unobserve(entry.target); }
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+/* ── Preferences ──────────────────────────────────────────────── */
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ── Hamburger menu ───────────────────────────────────────────── */
 const hamburger = document.querySelector('.nav-hamburger');
@@ -209,8 +511,9 @@ function closeDrawer() {
 
 hamburger.addEventListener('click', () => {
   const isOpen = drawer.classList.contains('open');
-  if (isOpen) { closeDrawer(); }
-  else {
+  if (isOpen) {
+    closeDrawer();
+  } else {
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
     drawer.classList.add('open');
@@ -218,13 +521,79 @@ hamburger.addEventListener('click', () => {
   }
 });
 
-// Close when a drawer link is tapped
-drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+// Close drawer when any link inside it is tapped
+drawer.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeDrawer);
+});
 
 // Close on outside tap
-document.addEventListener('click', e => {
-  if (!hamburger.contains(e.target) && !drawer.contains(e.target)) closeDrawer();
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !drawer.contains(e.target)) {
+    closeDrawer();
+  }
 });
+
+/* ── Scroll-triggered reveal ──────────────────────────────────── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ── Counter animation (scroll-triggered) ─────────────────────── */
+function animateCounter(el) {
+  const target = +el.dataset.target;
+  if (prefersReduced) { el.textContent = target; return; }
+  const duration = 1400;
+  const start = performance.now();
+  const tick = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = target;
+  };
+  requestAnimationFrame(tick);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+/* ── Active nav link on scroll ────────────────────────────────── */
+const sections = document.querySelectorAll('section[id], header[id]');
+const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = '';
+        link.style.borderColor = '';
+      });
+      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if (active) {
+        active.style.color = 'var(--ink)';
+        active.style.borderColor = 'var(--brass)';
+      }
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => navObserver.observe(s));
 </script>
 
 </body>
